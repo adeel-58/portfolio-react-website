@@ -1,0 +1,157 @@
+/* Main Services Section */
+.services {
+  background-color: #181818;
+  color: #eee;
+  padding: 0px 15% 0px 15%;
+  padding-top: 100px;
+  font-family: "Raleway", sans-serif;
+}
+
+/* Upper container */
+.services-upper {
+   display: flex;
+  padding-right: 85px;
+  justify-content: flex-end;   /* align to right */
+  gap: 30px;                   /* keep them close */
+  margin-bottom: 60px;
+  align-items: flex-end;   /* push text down to bottom */
+}
+.services-text h5 {
+  color: #E4D55B;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  text-align: right;
+}
+
+.services-text h2 {
+  font-size: 40px;
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  margin-top: 15px;
+  margin-bottom: 35px;
+  text-align: right;
+}
+
+.services-line {
+  width: 670px;              
+  height: 4px;
+  background: #444;          
+  margin-bottom: 0px;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.services-line::after {
+  content: "";
+  position: absolute;
+  left: 10%;                 /* shift start inward */
+  top: 0;
+  height: 100%;
+  width: 0;                  
+  background: #E4D55B;       
+  border-radius: 2px;
+  animation: fillLine 1s forwards;
+}
+
+.services-line.animate::after {
+  width: 80%;  /* fills only inside (100% - left offset*2) */
+}
+
+.services-number {
+    width: 280px;
+  
+  font-weight: 700;
+  font-family: "Merriweather", serif;
+  color: rgba(255, 255, 255, 0.08);
+  line-height: 1;
+}
+
+/* Lower container */
+.services-lower {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  
+}
+
+/* Cards */
+
+.services-cards {
+  display: flex;
+  gap: 30px;
+  flex: 2;
+}
+
+.service-card {
+  flex: 1;
+  text-align: center;
+  background: none;       /* remove dark box */
+  padding: 0;   
+  text-align: left;          /* remove extra padding */
+}
+
+.service-card img {
+  width: 100%;
+  
+  margin-bottom: 15px;
+  
+}
+
+.service-card h4 {
+  font-size: 18px;
+  font-family: "Raleway", serif;
+  font-weight: 400;
+  margin-top: 5px;
+  margin-bottom: 8px;
+  color: #eee;
+  text-align: left;  
+}
+
+.service-card p {
+  font-size: 17px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #ccc;
+  text-align: left;  
+}
+
+/* Skills */
+.services-skills {
+  flex: 1;
+  
+}
+
+.services-skills h4 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-family: "Merriweather", serif;
+}
+.services-right{
+    width: 900px;
+}
+.services-right ul {
+  list-style: none;       /* removes browser bullets */
+  margin: 0;              /* reset default margin */
+  padding: 0;             /* reset default indent */
+}
+.services-right li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px; /* space for custom bullet */
+  font-size: 17px;
+  color: #ccc;
+}
+
+.services-right li::before {
+  content: "•";
+  color: #ccc;
+  position: absolute;
+  left: 0;
+  font-size: 30px;
+  line-height: 1;
+}

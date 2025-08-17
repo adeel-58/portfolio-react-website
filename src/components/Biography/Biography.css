@@ -1,0 +1,118 @@
+
+.biography {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 70px;
+   
+  padding-top: 230px;
+  background-color: #181818;
+  color: #eee;
+  height: 80vh;
+  padding-right: 15%;
+  padding-left: 10%;
+}
+
+.bio-left {
+  flex: 1;
+}
+
+.bio-number {
+  width: 280px;
+  margin-bottom: 2rem;
+  margin-left: 100px;
+  
+}
+
+.bio-education {
+  font-size: 17px;
+  line-height: 1.6;
+  text-align: right; 
+  font-family: "Raleway", sans-serif;
+  font-weight: 400px;  /* align text to the right */
+}
+.bio-education h4 {
+    margin: 0px;
+}
+ .year{
+    margin-bottom: 0px;
+}
+.bio-education h4 {
+  font-size: 17px;
+  margin: 0 0;
+  text-align: right; 
+  font-family: "Raleway", sans-serif;
+  font-weight: 400px;   /* keep headings aligned too */
+}
+
+.bio-education .highlight {
+  color: #E4D55B; /* yellow highlight */
+  text-align: right;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400px; 
+}
+
+
+.bio-right {
+  flex: 2;
+}
+
+.bio-subtitle {
+  color: #E4D55B;
+   font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0px;
+}
+
+.bio-title {
+  font-size: 40px;
+   font-family: "Merriweather", serif;
+  font-weight: 400; /* bold headings */
+  margin-top: 15px;
+  margin-bottom: 35px;
+}
+
+.bio-line {
+  width: 670px;              /* final size */
+  height: 4px;
+  background: #444;          /* grey background track */
+  margin-bottom: 35px;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bio-line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;                  /* start empty */
+  background: #E4D55B;       /* yellow progress bar */
+  border-radius: 2px;
+  animation: fillLine 1s forwards; /* smooth fill animation */
+}
+.bio-line.animate::after {
+  width: 100%; /* smoothly fills when in view */
+}
+/* Smooth fill animation */
+@keyframes fillLine {
+  from {
+    width: 0;
+  }
+  to {
+    width: 20%; /* fills to full length */
+  }
+}
+
+
+.bio-right p {
+  
+  font-family: "Raleway", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: #ccc;
+  line-height: 1.4;
+}
