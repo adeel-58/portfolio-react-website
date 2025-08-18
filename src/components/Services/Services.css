@@ -1,7 +1,7 @@
 /* Main Services Section */
 .services {
   background-color: #181818;
-  color: #eee;
+  color: #ffffff;
   padding: 0px 15% 0px 15%;
   padding-top: 90px;
   font-family: "Raleway", sans-serif;
@@ -108,7 +108,7 @@
   font-weight: 400;
   margin-top: 5px;
   margin-bottom: 8px;
-  color: #eee;
+  color: #ffffff;
   text-align: left;  
 }
 
@@ -117,7 +117,7 @@
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   line-height: 1.5;
-  color: #ccc;
+  color: #ffffff;
   text-align: left;  
 }
 
@@ -145,12 +145,12 @@
   position: relative;
   padding-left: 20px; /* space for custom bullet */
   font-size: 17px;
-  color: #ccc;
+  color: #ffffff;
 }
 
 .services-right li::before {
   content: "•";
-  color: #ccc;
+  color: #ffffff;
   position: absolute;
   left: 0;
   font-size: 30px;

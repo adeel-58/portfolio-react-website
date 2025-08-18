@@ -70,7 +70,7 @@ function Projects() {
       subtitle: "Selected work",
       mainTitle: "PROJECTS",
       projects: [
-        { title: "BIZFUTURX", description: "Branding, Website and Social media posts" },
+        { title: "BIZFUTURIX", description: "Branding, Website and Social media posts" },
         { title: "NAILOVA", description: "Branding, Website and Social media posts" },
         { title: "NOOKY", description: "Branding" },
         { title: "Bō", description: "Branding" },
@@ -79,7 +79,7 @@ function Projects() {
     },
     {
       subtitle: "Branding, website and social media",
-      mainTitle: "BIZFUTURZ",
+      mainTitle: "BIZFUTURIX",
       layout: "grid-6", // Slide 2
       images: [p11, p12, p13, p14, p15, p16],
     },
@@ -169,7 +169,7 @@ function Projects() {
   <img src={activeSlide.images[0]} alt="Main Project" />
 
   {/* ✅ Overlay for project1 and project2 */}
-  {activeSlide.mainTitle === "BIZFUTURZ" && (
+  {activeSlide.mainTitle === "BIZFUTURIX" && (
     <img
       src={require("../../assets/projects/top2.png")}
       alt="Overlay"
