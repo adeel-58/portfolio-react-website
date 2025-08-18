@@ -19,9 +19,9 @@ import p16 from "../../assets/projects/project1/6.png";
 import p21 from "../../assets/projects/project2/1.png";
 import p22 from "../../assets/projects/project2/2.png";
 import p23 from "../../assets/projects/project2/3.png";
-import p24 from "../../assets/projects/project2/4.png";
+import p24 from "../../assets/projects/project2/44.png";
 import p25 from "../../assets/projects/project2/5.png";
-import p26 from "../../assets/projects/project2/6.png";
+import p26 from "../../assets/projects/project2/66.png";
 
 import p31 from "../../assets/projects/project3/1.png";
 import p32 from "../../assets/projects/project3/2.png";
@@ -35,7 +35,7 @@ import p42 from "../../assets/projects/project4/2.png";
 import p43 from "../../assets/projects/project4/3.png";
 import p44 from "../../assets/projects/project4/4.png";
 import p45 from "../../assets/projects/project4/5.png";
-import p46 from "../../assets/projects/project4/6.png";
+import p46 from "../../assets/projects/project4/66.png";
 
 function Projects() {
   const lineRef = useRef(null);
@@ -73,7 +73,7 @@ function Projects() {
         { title: "BIZFUTURX", description: "Branding, Website and Social media posts" },
         { title: "NAILOVA", description: "Branding, Website and Social media posts" },
         { title: "NOOKY", description: "Branding" },
-        { title: "Bo", description: "Branding" },
+        { title: "Bō", description: "Branding" },
       ],
       layout: "default", // Slide 1
     },
@@ -84,20 +84,20 @@ function Projects() {
       images: [p11, p12, p13, p14, p15, p16],
     },
     {
-      subtitle: "Creative Direction & Logo",
+      subtitle: "Branding, website and social media",
       mainTitle: "NAILOVA",
       layout: "grid-6", // Slide 3
       images: [p21, p22, p23, p24, p25, p26],
     },
     {
-      subtitle: "Web + Mobile + Marketing",
+      subtitle: "Branding",
       mainTitle: "NOOKY",
       layout: "grid-6", // Slide 4
       images: [p31, p32, p33, p34, p35, p36],
     },
     {
-      subtitle: "Visual Identity & Packaging",
-      mainTitle: "BO",
+      subtitle: "Branding",
+      mainTitle: "Bō",
       layout: "grid-6", // Slide 5
       images: [p41, p42, p43, p44, p45, p46],
     },
@@ -162,18 +162,46 @@ function Projects() {
         )}
 
         {/* Grid layout slides */}
-        {activeSlide.layout === "grid-6" && (
-          <div className="projects-gallery-grid">
-            {activeSlide.images.map((src, i) => (
-              <img
-                key={i}
-                className={`grid-img img${i + 1}`}
-                src={src}
-                alt={`Slide ${i + 1}`}
-              />
-            ))}
-          </div>
-        )}
+      {activeSlide.layout === "grid-6" && (
+  <div className="projects-gallery-grid-wrapper">
+   {/* Big first image */}
+<div className="big-project-image">
+  <img src={activeSlide.images[0]} alt="Main Project" />
+
+  {/* ✅ Overlay for project1 and project2 */}
+  {activeSlide.mainTitle === "BIZFUTURZ" && (
+    <img
+      src={require("../../assets/projects/top2.png")}
+      alt="Overlay"
+      className="overlay-image2"
+    />
+  )}
+
+  {activeSlide.mainTitle === "NAILOVA" && (
+    <img
+      src={require("../../assets/projects/top.png")}
+      alt="Overlay"
+      className="overlay-image"
+    />
+  )}
+</div>
+
+
+
+    {/* Other images */}
+    <div className="projects-gallery-grid">
+      {activeSlide.images.slice(1).map((src, i) => (
+        <img
+          key={i}
+          className={`grid-img img${i + 2}`} // start from img2
+          src={src}
+          alt={`Slide ${i + 2}`}
+        />
+      ))}
+    </div>
+  </div>
+)}
+
 
         {/* Arrow buttons */}
         {activeSlide.layout !== "default" ? (

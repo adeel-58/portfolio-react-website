@@ -49,17 +49,30 @@ function Contact() {
       {/* Lower Section */}
       <div className="contact-lower">
         {/* Left = Form */}
-        <div className="contact-left">
-          <h4>Contact form</h4>
-          <form className="contact-form">
-            <div className="form-row">
-              <input type="text" placeholder="Name" required />
-              <input type="email" placeholder="E-mail" required />
-            </div>
-            <textarea placeholder="Message" required></textarea>
-            <button type="submit">SUBMIT</button>
-          </form>
-        </div>
+        {/* Left = Form */}
+<div className="contact-left">
+  <h4>Contact form</h4>
+  <form className="contact-form">
+    <div className="form-row">
+      <div className="form-group">
+        <label>NAME</label>
+        <input type="text" required />
+      </div>
+      <div className="form-group">
+        <label>E-MAIL</label>
+        <input type="email" required />
+      </div>
+    </div>
+
+    <div className="form-group">
+      <label>MESSAGE</label>
+      <textarea required></textarea>
+    </div>
+
+    <button type="submit">SUBMIT</button>
+  </form>
+</div>
+
 
         {/* Right = Info */}
         <div className="contact-right">
@@ -73,7 +86,7 @@ function Contact() {
           <h4>LINKEDIN</h4>
           <p>
             <a 
-              href="https://www.linkedin.com/in/cristina-palko-59ae67337/"
+              href="https://www.linkedin.com/in/cristina-palko-59a267337/"
               target="_blank" 
               rel="noopener noreferrer"
             >

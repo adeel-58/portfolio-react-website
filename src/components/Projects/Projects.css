@@ -6,12 +6,11 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: 70px;
-  padding-top: 150px;
+  padding-top: 135px;
   background-color: #181818;
   color: #eee;
   padding-right: 15%;
   padding-left: 10%;
- 
 }
 
 .projects-left {
@@ -118,13 +117,13 @@
 .projects-gallery {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr; /* left bigger, right smaller */
-  gap: 20px;
+  gap: 0px;
   align-items: start;
 }
 
 /* Main image (left) */
 .main-project-image img {
-   max-width: 400px;   /* 🔽 shrink width */
+  max-width: 400px;
   max-height: 500px; 
   width: 100%;
   height: auto;
@@ -134,55 +133,46 @@
 
 /* Right side stacked images */
 .secondary-projects {
-  display: flex;           /* ✅ stack naturally */
-  flex-direction: column;  /* ✅ one on top of the other */
+  display: flex;
+  flex-direction: column;
   gap: 20px;
 }
 
 .secondary-projects img {
-  width: 100%;
+  width: 98%;
   height: auto;
   object-fit: contain;
   display: block;
 }
 
-
-
-/* ---------- GALLERY SLIDE 2 ---------- */
-
-
-/* ---------- ARROW ---------- */
+/* ---------- ARROWS ---------- */
 .projects-arrow-demo {
-  position: absolute;   /* 🔥 stays fixed relative to projects-right */
+  position: absolute;
   bottom: 20px;
-  right: 0;
+  right: -100px;
   cursor: pointer;
-   right: -100px; 
- 
 }
 
 .projects-arrow-demo img {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   transition: transform 0.3s ease;
-  
 }
 
 .projects-arrow-demo img:hover {
   transform: translateX(5px);
 }
+
 .projects-arrow-left {
   position: absolute;
   bottom: 20px;
-  left: 0;
+  left: 1170px;
   cursor: pointer;
-   left: 1100px;
- 
 }
 
 .projects-arrow-left img {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   transition: transform 0.3s ease;
 }
 
@@ -190,48 +180,81 @@
   transform: translateX(-5px);
 }
 
-
-
-
-
-
-
-
-
-
-.projects-gallery-grid {
+/* ---------- GALLERY GRID ---------- */
+.projects-gallery-grid-wrapper {
   display: grid;
-  grid-template-columns: repeat(4, auto); /* auto so columns adapt */
-  grid-auto-rows: auto; /* let rows size naturally */
-  gap: 20px;
+  grid-template-columns: 350px 1fr; /* big image + grid */
+  gap: 0px; /* ✅ same gap everywhere */
+  align-items: start;
 }
 
-.projects-gallery-grid .img1 {
-  grid-column: 1 / 2;
-  grid-row: 1 / 3;
-  width: 600px;   /* ✅ your chosen width */
-  height: auto;
-  
+.big-project-image {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #111;
+  margin-left: 0px;
+  
 }
 
-.projects-gallery-grid .img1 img {
-  width: 100%;
+.big-project-image img {
+  width: 98%;
+  max-width: 380px;
   height: auto;
-  object-fit: contain; /* ✅ no zoom, keep full image */
+  object-fit: contain;
+}
+/* Grid for the rest */
+.projects-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 234px); /* fixed column width */
+  gap: 20px;  /* 🔥 equal spacing in all directions */
+  justify-content: start; /* align grid to left side */
+  margin-left: 20px;
+}
+
+/* Smaller images */
+.projects-gallery-grid img {
+  width: 230px;
+  height: 230px;
+  object-fit: contain; 
+  display: block;
+}
+.big-project-image {
+  position: relative; /* ✅ allows overlay positioning */
+}
+
+.overlay-image {
+  position: absolute;
+  bottom: -90px;   /* adjust spacing */
+  left: -100px;     /* stick to bottom-left */
+  width: 250px !important;    /* resize overlay image */
+  height: auto;
+  pointer-events: none; /* ✅ so it doesn’t block clicks */
+}
+
+.overlay-image2 {
+  position: absolute;
+  bottom: -70px;   /* adjust spacing */
+  left: -100px;     /* stick to bottom-left */
+  width: 330px !important;    /* resize overlay image */
+  height: auto;
+  pointer-events: none; /* ✅ so it doesn’t block clicks */
 }
 
 
 
-/* Other images follow the auto row height */
-.projects-gallery-grid img:not(.img1 img) {
-  width: 100%;
-  height: 100%;
-  object-fit: contain; /* ✅ keeps proportions */
+
+
+
+@media (max-width: 1367px) {
+  .projects-arrow-left {
+    left: 1000px;
+    bottom: -10px;
+  }
+  .projects-arrow-demo {
+  position: absolute;
+  bottom: -10px;
+  right: 0px;
+  cursor: pointer;
 }
 
-
-
+}
