@@ -1,0 +1,237 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Raleway:wght@400;700&display=swap');
+
+.projects-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 70px;
+  padding-top: 150px;
+  background-color: #181818;
+  color: #eee;
+  padding-right: 15%;
+  padding-left: 10%;
+ 
+}
+
+.projects-left {
+  flex: 1;
+}
+
+.projects-right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  min-height: 700px;
+  height: 700px;        /* 🔥 Force same height for all slides */
+  position: relative;   /* for arrow positioning */
+}
+
+.projects-number-image {
+  width: 280px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  margin-left: 100px;
+}
+
+.projects-list {
+  font-size: 17px;
+  line-height: 1.6;
+  text-align: right;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  margin-top: 2rem;
+}
+
+.project-item {
+  margin-bottom: 10px;
+}
+
+.project-title-name {
+  margin: 0;
+  font-size: 17px;
+  text-align: right;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.project-description {
+  margin: 0;
+  font-size: 17px;
+  text-align: right;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  color: #ccc;
+}
+
+.projects-subtitle {
+  color: #E4D55B;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.projects-title {
+  font-size: 40px;
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  margin-top: 15px;
+  margin-bottom: 35px;
+}
+
+.projects-line {
+  width: 670px;
+  max-width: 100%;
+  height: 4px;
+  background: #444;
+  margin-bottom: 35px;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.projects-line::after {
+  content: "";
+  position: absolute;
+  left: 40%;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background: #E4D55B;
+  border-radius: 2px;
+  animation: fillLine 1s forwards;
+}
+
+.projects-line.animate::after {
+  width: 100%;
+}
+
+@keyframes fillLine {
+  from { width: 0; }
+  to { width: 20%; }
+}
+
+/* ---------- GALLERY SLIDE 1 ---------- */
+.projects-gallery {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr; /* left bigger, right smaller */
+  gap: 20px;
+  align-items: start;
+}
+
+/* Main image (left) */
+.main-project-image img {
+   max-width: 400px;   /* 🔽 shrink width */
+  max-height: 500px; 
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Right side stacked images */
+.secondary-projects {
+  display: flex;           /* ✅ stack naturally */
+  flex-direction: column;  /* ✅ one on top of the other */
+  gap: 20px;
+}
+
+.secondary-projects img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+
+
+/* ---------- GALLERY SLIDE 2 ---------- */
+
+
+/* ---------- ARROW ---------- */
+.projects-arrow-demo {
+  position: absolute;   /* 🔥 stays fixed relative to projects-right */
+  bottom: 20px;
+  right: 0;
+  cursor: pointer;
+   right: -100px; 
+ 
+}
+
+.projects-arrow-demo img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+  
+}
+
+.projects-arrow-demo img:hover {
+  transform: translateX(5px);
+}
+.projects-arrow-left {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  cursor: pointer;
+   left: 1100px;
+ 
+}
+
+.projects-arrow-left img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.projects-arrow-left img:hover {
+  transform: translateX(-5px);
+}
+
+
+
+
+
+
+
+
+
+
+.projects-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto); /* auto so columns adapt */
+  grid-auto-rows: auto; /* let rows size naturally */
+  gap: 20px;
+}
+
+.projects-gallery-grid .img1 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  width: 600px;   /* ✅ your chosen width */
+  height: auto;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111;
+}
+
+.projects-gallery-grid .img1 img {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* ✅ no zoom, keep full image */
+}
+
+
+
+/* Other images follow the auto row height */
+.projects-gallery-grid img:not(.img1 img) {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* ✅ keeps proportions */
+}
+
+
+

@@ -45,7 +45,7 @@ useEffect(() => {
 
           <p className="highlight year">2024 - Present</p>
           <h4 className="highlight">UNIVERSITY OF AUREL VLAICU</h4>
-          <p>Master in Product Design and ● Development</p>
+          <p>Master in Product Design and Development ●</p>
         </div>
       </div>
 

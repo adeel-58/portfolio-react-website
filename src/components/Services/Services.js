@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Services.css";
 import numberImage from "../../assets/02.png";
-import card1 from "../../assets/1.jpg";
-import card2 from "../../assets/1.jpg";
-import card3 from "../../assets/1.jpg";
+import card1 from "../../assets/services/1.png";
+import card2 from "../../assets/services/2.png";
+import card3 from "../../assets/services/3.png";
 
 function Services() {
   const lineRef = useRef(null);

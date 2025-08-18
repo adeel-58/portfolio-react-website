@@ -1,0 +1,175 @@
+/* Main Contact Section */
+.contact {
+  background-color: #181818;
+  color: #eee;
+  padding: 0px 15% 0px 15%;
+  padding-top: 100px;
+  font-family: "Raleway", sans-serif;
+  padding-bottom: 150px;
+}
+
+/* Upper container */
+.contact-upper {
+  display: flex;
+  padding-right: 85px;
+  justify-content: flex-end;   /* align to right */
+  gap: 30px;
+  margin-bottom: 60px;
+  align-items: flex-end;       /* push text down */
+}
+
+.contact-text h5 {
+  color: #E4D55B;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  text-align: right;
+}
+
+.contact-text h2 {
+  font-size: 40px;
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  margin-top: 15px;
+  margin-bottom: 35px;
+  text-align: right;
+}
+
+.contact-line {
+  width: 670px;
+  height: 4px;
+  background: #444;
+  margin-bottom: 0px;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-line::after {
+  content: "";
+  position: absolute;
+  left: 80%;                 /* same inward start */
+  top: 0;
+  height: 100%;
+  width: 0;
+  background: #E4D55B;
+  border-radius: 2px;
+  animation: fillLine 1s forwards;
+}
+
+.contact-line.animate::after {
+  width: 100%;
+}
+
+.contact-number {
+  width: 280px;
+  font-weight: 700;
+  font-family: "Merriweather", serif;
+  color: rgba(255, 255, 255, 0.08);
+  line-height: 1;
+}
+
+/* Lower container */
+.contact-lower {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+/* Left = Form */
+.contact-left {
+  flex: 2;
+}
+
+.contact-left h4 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-family: "Raleway", serif;
+  font-weight: 400;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-row input {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  background: #2a2a2a;
+  color: #fff;
+  font-size: 16px;
+}
+
+textarea {
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background: #2a2a2a;
+  color: #fff;
+  font-size: 16px;
+  min-height: 150px;
+  resize: vertical;
+}
+
+button {
+  background: #E4D55B;
+  font-size: 17px;
+  color: #ffffff;
+  padding: 12px 48px;
+  border: none;
+  border-radius: 30px;   /* more rounded */
+  cursor: pointer;
+  margin-top: 20px;
+  align-self: flex-end;  /* moves button to right side */
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #ffd500;
+}
+
+/* Right = Info */
+.contact-right {
+  flex: 1;
+}
+
+.contact-right p {
+  font-size: 17px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #ccc;
+  text-align: left;
+}
+
+.contact-right h4 {
+  font-size: 18px;
+  font-family: "Raleway", serif;
+  font-weight: 400;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  color: #eee;
+  text-align: left;
+}
+
+.contact-right a {
+  color: #E4D55B;
+  text-decoration: none;
+}
+
+.contact-right a:hover {
+  text-decoration: underline;
+}
